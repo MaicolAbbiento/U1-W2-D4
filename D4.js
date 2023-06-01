@@ -56,12 +56,12 @@ crazyDiff(21)
 */
 function boundary(n1) {
   if (n1 === 400 || (20 < n1 && n1 < 100)) {
-    console.log(n1)
+    return true
   } else {
-    console.log(false)
+    return false
   }
 }
-boundary(1000)
+console.log(boundary(4))
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
@@ -85,7 +85,7 @@ epify(" CIAO")
 
 function check3and7(n1) {
   if (n1 >= 0) {
-    if ((n1 % 3 === 0) | (n1 % 7 === 0)) {
+    if (n1 % 3 === 0 || n1 % 7 === 0) {
       console.log("is this number divisible for 3 or 7 ", true)
     } else {
       console.log("is this number divisible for 3 or 7 ", false)
@@ -94,7 +94,7 @@ function check3and7(n1) {
     console.log("errore si prega di mettere un numero positivo")
   }
 }
-check3and7(31)
+check3and7(8)
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
@@ -121,7 +121,7 @@ function upperFirst(string) {
   return risultatostring
 }
 
-let risultato = upperFirst("buorna sera")
+let risultato = upperFirst("buorna sera sono maicol")
 console.log(risultato)
 
 /* ESERCIZIO 9
