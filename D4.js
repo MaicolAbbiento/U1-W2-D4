@@ -111,18 +111,15 @@ console.log(stringaInvertita)
 */
 function upperFirst(string) {
   let parole = string.split(" ")
-  let risultato = []
+  let risultato = ""
   for (let i = 0; i < parole.length; i++) {
-    let parola = parole[i]
-    let parolaMaiuscola = parola.charAt(0).toUpperCase() + parola.slice(1)
-    risultato.push(parolaMaiuscola)
+    risultato += parole[i].charAt(0).toUpperCase() + parole[i].slice(1) + " "
   }
-  let risultatostring = risultato.join(" ")
-  return risultatostring
+
+  return risultato
 }
 
-let risultato = upperFirst("buorna sera sono maicol")
-console.log(risultato)
+console.log(upperFirst("buona sera sono maicol"))
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
@@ -140,7 +137,7 @@ cutsString("ciao sono")
 function giveMeRandom(n1) {
   let numeriRandom = []
   for (let i = 0; i < n1; i++) {
-    let Random = Math.floor(Math.random() * 10)
+    let Random = Math.round(Math.random() * 10)
     numeriRandom.push(Random)
   }
   console.log(numeriRandom)
